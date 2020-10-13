@@ -14,13 +14,18 @@ switch (lang)
 }
 
 const array = [
-    ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
-    ["Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday", "Sunday"]
+    ["ru", ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]],
+    ["en", ["Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday", "Sunday"]]
 ];
 
-lang === 'ru' ? console.log(array[0]) :
-lang === 'en' ? console.log(array[1]) : 
-console.log('Неверное значение');
+
+// lang === 'ru' ? console.log(array[0]) :
+// lang === 'en' ? console.log(array[1]) : 
+// console.log('Неверное значение');
+
+let map = new Map(array);
+console.log(map.get(lang));
+
 
 const namePerson = prompt('Введите имя: ');
 
